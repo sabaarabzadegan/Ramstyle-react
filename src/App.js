@@ -1,26 +1,19 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import AutoRotatingCarousel from './CarouselAutoRotate';
+import Box from "@material-ui/core/Box";
+import Dead from './static/Dead.png';
+import Alive from './static/Alive.png';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <Box>
+            <AutoRotatingCarousel open mobile>
+                <img src={Dead} alt='Dead' height={700} width={'100%'}/>
+                <img src={Alive} alt='Alive' height={700} width={'100%'}/>
+            </AutoRotatingCarousel>
+        </Box>
+    );
 }
 
 export default App;
